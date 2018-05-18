@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vélo'v - Réservation de vélos en libre service à Lyon</title>
+		<meta name="description" content=" " />
+		<link rel="stylesheet" href="style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+	</head>
+
+	<body>
+		
+		<!--Header-->
+		<header>
+			<div class="orange">
+				<i class="fas fa-bicycle"></i>
+			</div>
+			<h1>Vélo'<span class ="orange">v</span></h1>
+			<h3>Location de vélos en libre service dans Lyon</h3>
+		</header>
+
+		<div id="bloc_sections">
+
+			<!--Section Diaporama-->
+			<section id="diaporama">
+				<div id ="slide">
+					<div class="overlay">
+						<!--Images du slider-->
+						<img id ="image_slider" src="image_un_bis.jpg" alt="Photo de vélos" />
+					</div>
+					<!-- Texte du slider-->
+					<div id="texte_slider">
+						<h2 id = "titre_slider">Bienvenue sur l'application de réservation Vélo'v !</h2>
+						<p id="p_slider">Découvrez son fonctionnement</p>	
+					</div>
+				</div>
+
+				<!-- Flèches précèdent et suivant-->
+				<div id ="prev">
+					<i class="far fa-arrow-alt-circle-left"></i>
+				</div>
+				<div id="next">
+					<i class="far fa-arrow-alt-circle-right"></i>
+				</div>
+			</section>
+
+			<!--Section Carte-->
+			<section id="carte">
+				<!-- Map-->
+				<div id="map"></div>
+
+				<!-- Cadre détails station-->
+				<div id="infoStation">
+					<h3 class="bleu">STATION <span id="nom"></span></h3>
+					<h4>ETAT :</h4>
+					<p id="statut"><p>
+					<h4>ADRESSE :</h4>
+					<p id ="adresse"></p>
+					<p>Infos actualisées à <span id="actualisation"></span></p>
+					<p>
+						<i class="fas fa-bicycle fa-2x"></i>
+						<span id ="velos"></span> vélos disponibles
+					</p>
+					<p>
+						<i class="fas fa-lock-open 2x"></i>
+						<span id ="places"></span> places libres
+					</p>
+					<div class="boutons">
+						<div id="bouton_reservation">Réserver</div>
+						<div id="bouton_fermeture">Fermer</div>
+					</div>
+				</div>
+
+				<!-- Cadre réservation/signature -->
+				<div id ="reservation">
+					<h3 class="bleu">RESERVATION</h3>
+					<p>Vous allez réserver un vélo à la station <span id="resa-nom-station"></span>.</p>
+					<p>Signez ci-dessous pour valider la réservation : 
+					</br>
+						<canvas id="canvas" width="200" height="150"></canvas>
+						<i class="fas fa-pencil-alt fa-2x"></i>
+					</p>
+					<div class="boutons">
+						<div id="bouton_validation">Valider</div>
+						<div id="bouton_annulation">Annuler</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer-->
+			<footer>
+				<i class="far fa-clock"></i>
+				<p>xxx</p>
+			</footer>
+
+		</div>
+			
+		
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAeqd5lsKa68aMLT_JnN4Cu6Lc4M5o__A8&callback=initMap"
+    	async defer></script>
+    	<script src="js/markerclusterer.js"></script>
+		<script src="js/date.js"></script>
+		<script src="js/stations.js"></script>
+		<script src="js/ajax.js"></script>
+		<script src="js/map.js"></script>
+		<script src="js/reservation.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/diaporama.js"></script>
+	</body>
+
+</html>

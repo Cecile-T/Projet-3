@@ -1,0 +1,273 @@
+/************************************ELEMENTS PRINCIPAUX DE LA PAGE********************************/
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.orange {
+	color:#ffa800;
+}
+
+.bleu {
+	color: #009ee0;
+}
+
+/*************************************HEADER*******************************************************/
+header {
+	width:100%;
+	background-color: #009ee0;
+	margin-top: 0;
+	top:0;
+	display: flex;
+    position: fixed; 
+    z-index: 20; 
+    color:white;
+}
+
+header h3 {
+	font-weight: normal;
+	font-family: 'Anton';
+
+}
+
+/************************************DIAPORAMA*****************************************************/
+img {
+	min-width:100%;
+	height:500px;
+	width:100%;
+}
+
+/*CARTE*/
+#map {
+    height: 100%;
+    width: 100%;
+    position:absolute; 
+}
+
+/************************************************************************REGLES D'AFFICHAGE DESKTOP********************************************************/
+
+@media all and (min-device-width: 1025px){
+
+/***************************************HEADER*******************************************************/
+	header {
+		min-height:5%;
+    	box-shadow: 0px -2px 15px rgba(0,0,0, 0.5);
+	}
+
+	header div {
+		padding-left: 2%;
+		font-size: 7em;
+	}	
+
+	header h1 {
+		font-size: 3em;
+		padding-left: 2%;
+	}
+
+	header h3 {
+		padding-left: 20%;
+		padding-top: 0.7%;/*à voir*/
+		font-size: 2em;
+	}
+
+	
+
+	#bloc_sections {
+		margin-top: 8%;
+		position: relative;
+		height:100%;
+	}
+
+/****************************************DIAPORAMA*****************************************************/
+	#diaporama {
+		position:relative;
+		height:500px;
+	}
+
+	.overlay img {
+		filter: contrast(50%);/* or brightness*/
+		-webkit-filter: contrast(50%);
+	}
+
+	#texte_slider {
+		position: absolute;
+		z-index:8;
+		top:33%;
+		left:25%;
+		/*background: rgba(0, 0, 0, 0.5);*/
+		color: white;
+		border-radius:5px;
+		padding: 1% 2%;
+	}
+
+	#texte_slider h2 {
+		font-size: 2em;
+	}
+
+	#texte_slider p {
+		font-size: 1.3em;
+	}
+
+	#prev, #next {
+		position: absolute;
+		color:white;
+		z-index:8;
+		top:40%;
+		cursor: pointer;
+		font-size: 4em;
+	}
+
+	#prev {
+		left:5%;
+	}
+
+	#next {
+		right:5%;
+	}
+
+/***************************************CARTE***************************************************/
+	#carte {
+		position: relative;
+		height:100%;
+	}
+
+	#map {
+		border-top: 5px solid #009ee0;
+		border-bottom: 5px solid #009ee0;
+	}
+
+/***************************************PANNEAU INFOS STATION**********************************/
+	#infoStation {
+		z-index: 10;
+		background-color: black;
+		color:white;
+		border :1px outset black;
+		box-shadow: 3px 3px 3px black;
+		display: none;
+		position: absolute;
+		top: 6em;
+		left: 3em;
+		border-radius: 5px;
+		padding: 1%;
+		width: 20%;
+	}
+
+	#infoStation h3, #reservation h3 {
+		text-align: center;
+	}
+
+	#infoStation h4 {
+		margin-bottom: 0;
+	}
+
+	#infoStation p {
+		margin-top: 0;
+	}
+
+	#infoStation p:nth-child(8), #infoStation p:nth-child(9) {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.boutons {
+		display:flex;
+		justify-content: space-around;
+		color:white;
+		vertical-align: center;
+	}
+
+	#bouton_reservation {
+		background-color: #03bd5b;
+		width:25%;
+		height:2%;
+		padding:7px 3px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	#bouton_fermeture {
+		background-color: #e11f26;
+		width:25%;
+		height:2%;
+		padding:7px 3px;
+		text-align: center;
+		cursor:pointer;
+	}
+
+/*************************************PANNEAU RESERVATION*************************************/
+	#reservation {
+		z-index: 12;
+		background-color: black;
+		color:white;
+		border :1px outset black;
+		box-shadow: 3px 3px 3px black;
+		position: absolute;
+		bottom: 6em;
+		right: 3em;
+		border-radius: 5px;
+		padding: 1%;
+		width: 20%;
+		display:none;
+	}
+
+	#reservation span {
+		font-weight: bold;
+	}
+
+	#bouton_validation {
+		background-color: #03bd5b;
+		width:25%;
+		height:2%;
+		padding:7px 3px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	#bouton_annulation {
+		background-color: #e11f26;
+		width:25%;
+		height:2%;
+		padding:7px 3px;
+		text-align: center;
+		cursor:pointer;
+	}
+
+	/*canvas {
+		border:1px solid black;
+	}*/
+
+/**************************************FOOTER**************************************************************/
+	footer {
+		height:10%;
+		width:100%;
+		align-items: center;
+		color: white;
+		background:rgba(0, 0, 0, 0.7);
+		display: flex;
+		justify-content: center;
+   		z-index: 20; 
+   		padding-top: 1%;	
+	}
+
+	footer p {
+		margin-left: 2%;
+	}
+
+	footer i {
+		font-size: 3em;
+	}
+}
+
+/***************************************REGLES D'AFFICHAGE MOBILE******************************************/
+@media all and (max-device-width: 767px) {
+
+	#bloc_sections {
+		margin-top: 25%;
+	}
+
+}
