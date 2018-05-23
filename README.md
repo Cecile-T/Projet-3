@@ -4,18 +4,18 @@ Vous devez développer une application simulant la réservation de vélos (Vélo
 
 Vous développerez l'application entièrement en JavaScript en affichant une carte à l'aide de l’API GoogleMaps avec la liste des stations de location de vélos disponibles dans la ville de Lyon.
 
-Instructions
-Diaporama
+Instructions :
+- Diaporama
 La page d’accueil de l’application affichera un diaporama de photos et de textes expliquant le fonctionnement de l'application. Ce diaporama réagit également au clavier avec les touches gauche et droite pour reculer et avancer manuellement.
 
-Carte des vélos
+- Carte des vélos
 En dessous du diaporama se trouve une carte exploitant l'API GoogleMaps avec la localisation de toutes les stations de vélos, positionnées à l’aide de marqueurs.
 Un clic sur un marqueur affiche l’état de la station dans un panneau construit en HTML et
 CSS à côté de la carte Google Maps.
 
 La localisation et l'état de chaque station (ouverte, en travaux, combien de vélos et de places sont disponibles, etc.) est fourni via l'API de JCDecaux. Les données doivent provenir de l'API temps réel.
 
-Réservation d'un vélo
+- Réservation d'un vélo
 Il doit être possible de réserver un vélo disponible à la station sélectionnée en signant dans un champ libre implémenté à l’aide de l’API HTML5 Canvas. Une fois la signature validée, un vélo est marqué comme réservé à cette station.
 
 Pour ce projet, la réservation n'aura en réalité aucun effet. Seul le navigateur de l'utilisateur "retiendra" que le vélo a été réservé.
