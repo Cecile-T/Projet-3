@@ -28,8 +28,6 @@ Le pied de page affiche en permanence l’état de la réservation (s’il y en 
 Il ne peut y avoir qu'une réservation à la fois. Si une nouvelle réservation a lieu, elle remplace la précédente.
 
 **Contraintes techniques**  
-Vous pouvez utiliser la bibliothèque jQuery mais pas de plugins jQuery. Vous développerez donc le diaporama en entier vous-mêmes.
-
-Le code JavaScript doit entièrement être conçu en programmation orientée objet. 
-
-Le code doit exploiter les API Google Maps et les API JCDecaux. Il doit également utiliser les API Web Storage et Canvas.
+* Vous pouvez utiliser la bibliothèque jQuery mais pas de plugins jQuery. Vous développerez donc le diaporama en entier vous-mêmes.
+* Le code JavaScript doit entièrement être conçu en programmation orientée objet. 
+* Le code doit exploiter les API Google Maps et les API JCDecaux. Il doit également utiliser les API Web Storage et Canvas.
