@@ -1,14 +1,13 @@
 # Projet 3 : concevoir une carte interactive
 
 [Lien du site](http://velos.cecile-thienard.fr/) 
-
+ 
 **Projet validé le 13/06/2018. Commentaire de la soutenance :  
 Excellente présentation soutenue par un support proposant le plan de l'entretien, un rappel de la demande, les enjeux du projet (maitriser JS native), les objectifs d'apprentissage (javascript objet), les parti-pris techniques (API, etc.) et l'accessibilité de l'application (responsive et navigateurs)**
 
 **Fonctionnalités  
-Très bonne maitrise avec un bon REX et une vraie prévision d'amélioration sur plusieurs points JS, ES6, etc.**
-
-**Excellent projet, répondant à la demande, excellente présentation les attendus d'apprentissage sont acquis**
+Très bonne maitrise avec un bon REX et une vraie prévision d'amélioration sur plusieurs points JS, ES6, etc.
+Excellent projet, répondant à la demande, excellente présentation les attendus d'apprentissage sont acquis.**
 
 Vous devez développer une application simulant la réservation de vélos (Vélo'v) dans Lyon. Ces vélos sont répartis dans de nombreuses stations dans la ville. L'utilisateur doit pouvoir en réserver un depuis son navigateur (à condition qu'il reste des vélos disponibles à la station). La réservation sera temporairement enregistrée sur le navigateur du visiteur.
 
