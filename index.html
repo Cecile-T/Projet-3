@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Vélo'v - Réservation de vélos en libre service à Lyon</title>
+    <meta name="description" content="Application de réservation de vélos en libre service à Lyon" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:700|Roboto+Condensed" rel="stylesheet" />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <!--Container Bootstrap-->
+    <div class="container-fluid">
+
+        <!--Header-->
+        <header class="row fixed-top shadow-lg">
+            <div class="col-lg-5 d-flex justify-content-start">
+                <i class="fas fa-bicycle orange"></i>
+                <h1>Vélo'<span class="orange">v</span></h1>
+            </div>
+
+            <!--Menu de navigation-->
+            <nav class="col-lg-7">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active bleu" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bleu" href="#carte">Carte et réservations</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+
+        <!--Section Diaporama-->
+        <section class="row diaporama">
+
+            <!--Images du slider + overlay-->
+            <div class="thumbnail">
+                <img src="images/image_un.jpg" alt="Photo de vélos" id="image_slider">
+                <div id="overlay_slider"></div>
+
+                <!-- Texte du slider-->
+                <div class="caption">
+                    <h2 id="titre_slider" class="font-weight-bold">Bienvenue sur l'application de réservation Vélo'v !</h2>
+                    <p id="p_slider">Découvrez son fonctionnement</p>
+                </div>
+
+                <!-- Flèches précèdent et suivant-->
+                <div id="prev">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                </div>
+                <div id="next">
+                    <i class="far fa-arrow-alt-circle-right"></i>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!--Section Carte-->
+        <section id="carte" class="row">
+
+            <!-- Map-->
+            <div class="col-lg-12">
+                <div id="map"></div>
+
+                <!-- Cadre détails station-->
+                <div id="infoStation" class="col-lg-4">
+                    <h3 class="bleu text-center font-weight-bold">STATION <span id="nom"></span></h3>
+                    <h4>ETAT :</h4>
+                    <p><span class="badge badge-info" id="statut"></span>
+                        <p>
+                            <h4>ADRESSE :</h4>
+                            <p id="adresse" class="text-lowercase"></p>
+                            <p>Infos actualisées à <span id="actualisation"></span></p>
+                            <p class="text-center font-weight-bold">
+                                <i class="fas fa-bicycle fa-2x"></i>
+                                <span id="velos"></span> vélos disponibles
+                            </p>
+                            <p class="text-center font-weight-bold">
+                                <i class="fas fa-lock-open 2x"></i>
+                                <span id="places"></span> places libres
+                            </p>
+                            <div class="d-flex justify-content-around">
+                                <button type="button" class="btn btn-success" id="bouton_reservation">Réserver</button>
+                                <button type="button" class="btn btn-danger" id="bouton_fermeture">Fermer</button>
+                            </div>
+                </div>
+
+                <!-- Cadre Réservation/signature -->
+                <div id="reservation" class="col-lg-4">
+                    <h3 class="bleu text-center font-weight-bold">RESERVATION</h3>
+                    <p>Vous allez réserver un vélo à la station <span id="resa-nom-station" class="font-weight-bold"></span>.</p>
+                    <p>Signez ci-dessous pour valider la réservation : <br>
+                        <!--Canvas-->
+                        <canvas id="canvas" width="300" height="200"></canvas>
+                        <i class="fas fa-pencil-alt fa-lg"></i>
+                    </p>
+                    <div class="d-flex justify-content-around">
+                        <button type="button" class="btn btn-success" id="bouton_validation">Valider</button>
+                        <button type="button" class="btn btn-warning" id="bouton_effacer">Effacer</button>
+                        <button type="button" class="btn btn-danger" id="bouton_annulation">Annuler</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer-->
+        <footer class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <i class="far fa-clock"></i>
+                <h6 id="default_resa">Pas de réservation en cours.</h6>
+                <div id="current_resa">
+                    <h6 id="text_current_resa">Vous avez réservé un vélo à la station <span id="current_resa_nom" class="font-weight-bold"></span>. Votre réservation est encore valable pendant <span id="minutes_resa"></span> mn <span id="secondes_resa"></span> s.</h6>
+                    <button type="button" class="btn btn-danger" id="bouton_annulation_resa">Annuler la réservation</button>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!--JS-->
+    <script src="js/mapstyle.js"></script>
+    <script src="js/markerclusterer.js"></script>
+    <script src="js/stations.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/reservation.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/diaporama.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAeqd5lsKa68aMLT_JnN4Cu6Lc4M5o__A8&callback=initMap" async defer></script>
+</body>
+
+</html>
