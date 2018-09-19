@@ -2,7 +2,7 @@
 
 [Lien du site](https://velos.cecile-thienard.fr/)
 
-[Lien du descriptif du projet à réaliser](https://openclassrooms.com/fr/projects/concevez-une-carte-interactive-de-location-de-velos) 
+[Descriptif du projet à réaliser](https://openclassrooms.com/fr/projects/concevez-une-carte-interactive-de-location-de-velos) 
 
  
 **Projet validé le 13/06/2018. Commentaire de la soutenance :  
