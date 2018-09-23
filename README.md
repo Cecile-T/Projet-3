@@ -5,7 +5,7 @@
 [Descriptif du projet à réaliser](https://openclassrooms.com/fr/projects/concevez-une-carte-interactive-de-location-de-velos) 
 
  
-**Projet validé le 13/06/2018. Commentaire de la soutenance :  
+**Projet validé. Commentaire de la soutenance :  
 Excellente présentation soutenue par un support proposant le plan de l'entretien, un rappel de la demande, les enjeux du projet (maitriser JS native), les objectifs d'apprentissage (javascript objet), les parti-pris techniques (API, etc.) et l'accessibilité de l'application (responsive et navigateurs)**
 
 **Fonctionnalités  
